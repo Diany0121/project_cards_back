@@ -1,0 +1,31 @@
+@import '../core/Variables.scss';
+
+.link {
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+}
+
+
+.link:focus {
+    color: $green;
+}
+
+.link:hover {
+    color: $green;
+    transform: scale(1.1);
+}
+
+.link:active {
+    color: $pink ;
+}
+
+
+
+// ¿Para qué es cada cosa y por qué ese orden? 
+//Link (no visitado): El estado predeterminado que presenta un enlace cuando no está en ningún otro estado. Se puede especificar usando la pseudoclase :link.
+// Visited: Un enlace cuando ya se ha visitado (está grabado en el historial del navegador); se le aplica otro formato con la pseudoclase :visited.
+// Hover: Un enlace cuando se le pasa el cursor por encima; se le aplica otro formato con la pseudoclase :hover.
+// Focus: Un enlace cuando tiene el foco (por ejemplo, se salta a este con la tecla Tab del teclado o se le da el foco mediante programación usando HTMLElement.focus()); se le aplica un formato diferente con la pseudoclase :focus.
+// Active: Un enlace cuando se activa (por ejemplo, se hace clic encima); se le aplica un formato diferente con la pseudoclase :active.
+// Este orden es importante porque los estilos de enlace se construyen sobre los anteriores. Por ejemplo, los estilos de la primera regla se aplicarán a todas las reglas siguientes, y cuando activas un enlace también pasas con el cursor por encima. Si los pones en un orden incorrecto, no funcionarán adecuadamente. Para recordar este orden, puedes intentar utilizar una fórmula nemotécnica como LoVe Fears HAte.

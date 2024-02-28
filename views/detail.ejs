@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/cookieSvg.svg" />
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500;700&family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400;500&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/af62857aad.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Proyectos molones</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="https://project-promo-v-module-4-team-1.onrender.com/#/" class="link">
+          <i class="fa-solid fa-house nav__title"></i>
+        </a>
+        <div class="navBtn" id="navBtn">
+          <i class="fa-solid fa-bars navBtn_bars"></i>
+        </div>
+      </nav>
+      <ul class="hamburger" id="hamburger">
+        <li class="hamburger__li">
+          <a href="https://project-promo-v-module-4-team-1.onrender.com/#/cardProject" class="link">
+            <h3>Crea tu tarjeta</h3>
+          </a>
+        </li>
+        <li class="hamburger__li">
+          <a href="https://project-promo-v-module-4-team-1.onrender.com/#/listProject" class="link">
+            <h3>Mira tus tarjetas</h3>
+          </a>
+        </li>
+        <li class="hamburger__li">
+          <a href="https://project-promo-v-module-4-team-1.onrender.com/#/contact" class="link">
+            <h3>Conócenos</h3>
+          </a>
+        </li>
+        <li class="hamburger__li">
+          <a href="https://project-promo-v-module-4-team-1.onrender.com/#/contactform" class="link">
+            <h3>Contacta</h3>
+          </a>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section class="detail">
+        <img class="projectImage" src="<%= project.image %>" alt="" />
+        <div class="projectCard">
+          <article class="card">
+            <div class="text">
+              <h2 class="text__title"><%= project.namePj %></h2>
+              <p class="text__slogan"><%= project.slogan %></p>
+              <p class="text__desc"><%= project.descriptionPj %></p>
+              <section>
+                <p class="text__technologies"><%= project.technologies %></p>
+              </section>
+              <section class="text__icons">
+                <a
+                  href="<%= project.gitUrl %>"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text__icons--link"
+                >
+                  <i class="fa-brands fa-github text__iconsColor"></i>
+                </a>
+                <a
+                  href="<%= project.demoUrl %>"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="text__icons--link"
+                >
+                  <i class="fa-solid fa-globe"></i>
+                </a>
+              </section>
+            </div>
+
+            <div class="profile">
+              <img class="profile__image" src="<%= project.photo %>" alt="" />
+              <p class="profile__job"><%= project.job %></p>
+              <p class="profile__name"><%= project.nameAut %></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copy">©Cookie Team 2024</p>
+      <img class="footer__logo" src="/cookie.png" alt="logo Adalab" />
+    </footer>
+    <script>
+      const navBtn = document.getElementById('navBtn');
+      const hamburger = document.getElementById('hamburger');
+      navBtn.addEventListener('click', function () {
+        hamburger.classList.toggle('isActive');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+@import "../core/Variables.scss";
+.main {
+    background-color: $violet;
+    min-height: 83vh;
+    text-align: center;
+    padding: 10px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;          
+        @media (min-width: 768px) {
+           flex-direction: row;
+           gap: 20px;
+          }
+    }
+  }
+
